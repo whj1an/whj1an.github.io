@@ -1,0 +1,24 @@
+## MacOS
+**.DS_Store
+
+## IDEAs
+**.idea
+**.iml
+**.out/
+
+## Obsidian
+/.obsidian
+
+# VS Code
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Java
+target/
+*.class
+
+# Go
+bin/
