@@ -3,155 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jace — University of Ottawa, Computer Science and Mathematics">
-    <title>Jace</title>
-    <style>
-        :root {
-            --bg: #0f1419;
-            --surface: #1a2332;
-            --text: #e8ecf1;
-            --muted: #8b9cb3;
-            --accent: #6eb5ff;
-            --accent-dim: rgba(110, 181, 255, 0.15);
-            --radius: 12px;
-            --font: "Segoe UI", system-ui, -apple-system, sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-            font-family: var(--font);
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .wrap {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem 4rem;
-        }
-
-        header {
-            margin-bottom: 2.5rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .tag {
-            display: inline-block;
-            font-size: 0.75rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 0.75rem;
-        }
-
-        h1 {
-            font-size: clamp(1.75rem, 5vw, 2.25rem);
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin: 0 0 0.5rem;
-        }
-
-        .lead {
-            color: var(--muted);
-            font-size: 1.05rem;
-            margin: 0;
-        }
-
-        section {
-            margin-bottom: 2.25rem;
-        }
-
-        section h2 {
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin: 0 0 1rem;
-        }
-
-        .card {
-            background: var(--surface);
-            border-radius: var(--radius);
-            padding: 1.25rem 1.35rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 1.15rem;
-        }
-
-        li {
-            margin-bottom: 0.4rem;
-        }
-
-        li:last-child {
-            margin-bottom: 0;
-        }
-
-        footer {
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
-
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            margin-top: 1rem;
-            padding: 0.35rem 0.75rem;
-            font-size: 0.8rem;
-            color: var(--accent);
-            background: var(--accent-dim);
-            border-radius: 999px;
-        }
-    </style>
+    <meta name="description" content="Haojian (Jace) Wang — BSc Joint Honours Computer Science & Mathematics, University of Ottawa.">
+    <title>Haojian Wang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <nav class="site-nav" aria-label="Primary">
+        <a class="site-nav__brand" href="#">Haojian Wang</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">Menu</button>
+        <ul class="site-nav__links" id="nav-menu">
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+        </ul>
+    </nav>
+
     <div class="wrap">
-        <header>
-            <span class="tag">Personal site</span>
-            <h1>Haojian(Jace) Wang</h1>
-            <p class="lead">University of Ottawa — Computer Science and Mathematics</p>
-            <span class="pill" aria-hidden="true">Student · Builder</span>
+        <header class="hero reveal">
+            <span class="hero__eyebrow">Portfolio</span>
+            <h1>Haojian (Jace) Wang</h1>
+            <p class="hero__subtitle">BSc Joint Honours in Computer Science and Mathematics — University of Ottawa. Focused on algorithms, data, and building reliable software.</p>
+
+            <div class="contact-row">
+                <a href="https://www.openstreetmap.org/?mlat=45.4215&mlon=-75.6972#map=12" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-8-4.5-8-11a8 8 0 0 1 16 0c0 6.5-8 11-8 11z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Ottawa, ON
+                </a>
+                <a href="mailto:huwang035@uottawa.ca">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    huwang035@uottawa.ca
+                </a>
+                <a href="https://www.linkedin.com/in/whj1an/" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/whj1an" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+            </div>
+
         </header>
 
         <main>
-            <section id="projects" aria-labelledby="projects-heading">
-                <h2 id="projects-heading">Projects</h2>
+            <section id="skills" class="reveal" aria-labelledby="skills-heading">
+                <h2 id="skills-heading" class="section-title">Technical skills</h2>
                 <div class="card">
-                    <ul>
-                        <li>Algorithm Practice</li>
-                        <li>Database Project</li>
-                    </ul>
+                    <div class="skill-filters" role="group" aria-label="Filter skills by category">
+                        <button type="button" class="skill-filter is-active" data-filter="all">All</button>
+                        <button type="button" class="skill-filter" data-filter="languages">Languages</button>
+                        <button type="button" class="skill-filter" data-filter="data-ai">Data &amp; AI</button>
+                        <button type="button" class="skill-filter" data-filter="tools">Tools</button>
+                        <button type="button" class="skill-filter" data-filter="systems">Systems</button>
+                    </div>
+                    <div class="skill-groups">
+                        <div class="skill-group" data-category="languages">
+                            <h3>Languages</h3>
+                            <ul class="tag-list">
+                                <li><strong>Java</strong> </li>
+                                <li><strong>Python</strong> </li>
+                                <li><strong>SQL</strong></li>
+                                <li>JavaScript </li>
+                                <li>HTML &amp; CSS</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group" data-category="data-ai">
+                            <h3>Data &amp; AI</h3>
+                            <ul class="tag-list">
+                                <li>NumPy</li>
+                                <li>Pandas (basic)</li>
+                                <li>Data cleaning</li>
+                                <li>Exploratory data analysis</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group" data-category="tools">
+                            <h3>Tools</h3>
+                            <ul class="tag-list">
+                                <li>Git &amp; GitHub</li>
+                                <li>Docker (basic)</li>
+                                <li>IntelliJ IDEs</li>
+                                <li>VS Code</li>
+                                <li>PostgreSQL</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group" data-category="systems">
+                            <h3>Systems</h3>
+                            <ul class="tag-list">
+                                <li>Windows</li>
+                                <li>macOS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="reveal" aria-labelledby="education-heading">
+                <h2 id="education-heading" class="section-title">Education</h2>
+                <div class="edu-stack">
+                    <div class="card edu-card">
+                        <p class="edu-line">University of Ottawa</p>
+                        <p class="edu-meta">BSc Joint Honours in Computer Science and Mathematics · Sep 2024 – Apr 2028 (expected)</p>
+                        <p class="edu-label">Relevant coursework</p>
+                        <ul>
+                            <li>Data Structures &amp; Algorithms</li>
+                            <li>Databases</li>
+                            <li>Computer Architecture</li>
+                        </ul>
+                    </div>
+                    <div class="card edu-card">
+                        <p class="edu-line">A.E. Peacock Collegiate</p>
+                        <p class="edu-meta">High school diploma · Graduated 2024</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="reveal" aria-labelledby="projects-heading">
+                <h2 id="projects-heading" class="section-title">Projects</h2>
+                <div class="project-list">
+                    <article class="project-card">
+                        <h3>Algorithm practice &amp; problem solving <span class="project-subtitle">Java · Python · front-end</span></h3>
+                        <ul>
+                            <li>Implemented classic data structures and algorithms: arrays, linked lists, stacks, queues, trees, and hash tables.</li>
+                            <li>Solved algorithmic problems with a focus on time and space complexity.</li>
+                            <li>Maintained clean, modular code with clear documentation.</li>
+                        </ul>
+                    </article>
+                    <article class="project-card project-card--data">
+                        <h3>Data analysis mini projects <span class="project-subtitle project-subtitle--data">Python · toward AI</span></h3>
+                        <ul>
+                            <li>Performed data cleaning and exploratory data analysis with Pandas and NumPy.</li>
+                            <li>Visualized trends and distributions to support analytical conclusions.</li>
+                            <li>Transformed raw data into structured datasets for SQL-based analysis.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section id="experience" class="reveal" aria-labelledby="experience-heading">
+                <h2 id="experience-heading" class="section-title">Work experience</h2>
+                <div class="timeline">
+                    <article class="job">
+                        <h3 class="job__title">Kitchen Assistant — Taki Ramen, Ottawa</h3>
+                        <p class="job__meta">Mar 2025 – Present</p>
+                        <ul>
+                            <li>Worked efficiently in a high-pressure environment with strict time constraints.</li>
+                            <li>Coordinated with team members to ensure accurate and timely execution of tasks.</li>
+                            <li>Demonstrated reliability, attention to detail, and process discipline.</li>
+                        </ul>
+                    </article>
+                    <article class="job">
+                        <h3 class="job__title">Service Staff — Hopkins Dining Parlour, SK</h3>
+                        <p class="job__meta">Jan 2024 – Jul 2024</p>
+                        <ul>
+                            <li>Delivered food service and guest support in a fast-paced dining setting.</li>
+                            <li>Collaborated with staff to maintain service quality during peak hours.</li>
+                            <li>Followed safety and hygiene procedures consistently.</li>
+                        </ul>
+                    </article>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <p>This page is a simple start — you can add links, a résumé, and more projects anytime.</p>
+        <footer class="site-footer">
+            <p>© <span id="y"></span> Haojian Wang. Built for GitHub Pages.</p>
         </footer>
     </div>
+
+    <script>
+        document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script src="main.js" defer></script>
 </body>
 </html>

@@ -113,38 +113,4 @@
         });
     }
 
-    /* CV modal */
-    var openBtn = document.querySelector("[data-open-cv]");
-    var overlay = document.querySelector("[data-cv-modal]");
-    var closeBtn = document.querySelector("[data-close-cv]");
-
-    function openCv() {
-        if (overlay) {
-            overlay.classList.add("is-open");
-            overlay.setAttribute("aria-hidden", "false");
-            document.body.style.overflow = "hidden";
-            if (closeBtn) closeBtn.focus();
-        }
-    }
-
-    function closeCv() {
-        if (overlay) {
-            overlay.classList.remove("is-open");
-            overlay.setAttribute("aria-hidden", "true");
-            document.body.style.overflow = "";
-        }
-    }
-
-    if (openBtn) openBtn.addEventListener("click", openCv);
-    if (closeBtn) closeBtn.addEventListener("click", closeCv);
-    if (overlay) {
-        overlay.addEventListener("click", function (e) {
-            if (e.target === overlay) closeCv();
-        });
-    }
-    document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && overlay && overlay.classList.contains("is-open")) {
-            closeCv();
-        }
-    });
 })();
