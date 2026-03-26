@@ -116,14 +116,20 @@
 
     /* visit counter*/
     (async function(){
-        var namespace = "haojian-wang-site-2026";
-        var today = new Date().toISOString().split("T")[0];
+        var namespace = "haojian-wang-site-2026"; /* Unique namespace for this site */
+        var today = new Date().toISOString().split("T")[0]; /* e.g. "2026-03-25" */
+        var sessionKey = "counted-" + today;
+        var alreadyCounted = sessionStorage.getItem(sessionKey);
 
         try {
             var results = await Promise.all([
                 fetch("https://api.countapi.xyz/hit/" + namespace + "/total-visits").then(function (r) { return r.json(); }),
                 fetch("https://api.countapi.xyz/hit/" + namespace + "/daily-" + today).then(function (r) { return r.json(); })
             ]);
+
+
+            /* Mark this session as counted so refreshes don't increment again */
+            if (!alreadyCounted) sessionStorage.setItem(sessionKey, "1");
 
             var totalEl = document.getElementById("total-count");
             var dailyEl = document.getElementById("daily-count");
