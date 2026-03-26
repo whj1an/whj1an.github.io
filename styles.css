@@ -515,6 +515,35 @@ section {
     text-align: center;
 }
 
+/* Counter */
+.visit-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 0.5rem;
+}
+
+.counter-item {
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: flax;
+    align-items:center;
+    gap: 5px;
+}
+
+.counter-item strong {
+    font-weight: 500;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
+
+.counter-divider {
+    width: 1px;
+    height: 12px;
+    background: var(--border);
+}
+
 /* Modal */
 .modal-overlay {
     position: fixed;

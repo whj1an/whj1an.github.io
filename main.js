@@ -113,4 +113,26 @@
         });
     }
 
+
+    /* visit counter*/
+    (async function(){
+        var namespace = "haojian-wang-site-2026";
+        var today = new Date().toISOString().split("T")[0];
+
+        try {
+            var results = await Promise.all([
+                fetch("https://api.countapi.xyz/hit/" + namespace + "/total-visits").then(function (r) { return r.json(); }),
+                fetch("https://api.countapi.xyz/hit/" + namespace + "/daily-" + today).then(function (r) { return r.json(); })
+            ]);
+
+            var totalEl = document.getElementById("total-count");
+            var dailyEl = document.getElementById("daily-count");
+
+            if (totalEl) totalEl.textContent = (results[0].value || 0).toLocaleString();
+            if (dailyEl) dailyEl.textContent = (results[1].value || 0).toLocaleString();
+        
+        } catch (err) {
+            console.warn("Counter fail to load", err);
+        }
+    })
 })();
